@@ -31,6 +31,7 @@ setuptools.setup(
     url='http://github.com/tensorflow/agents',
     install_requires=[
         'tensorflow',
+        'dm-control',
         'gym',
         'ruamel.yaml',
     ],

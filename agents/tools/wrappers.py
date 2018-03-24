@@ -510,8 +510,8 @@ class ConvertTo32Bit(object):
       Converted observation, converted reward, done flag, and info object.
     """
     observ, reward, done, info = self._env.step(action)
-    observ = self._convert_observ(observ)
-    reward = self._convert_reward(reward)
+    # observ = self._convert_observ(observ)
+    # reward = self._convert_reward(reward)
     return observ, reward, done, info
 
   def reset(self):
@@ -521,7 +521,7 @@ class ConvertTo32Bit(object):
       Converted observation.
     """
     observ = self._env.reset()
-    observ = self._convert_observ(observ)
+    # observ = self._convert_observ(observ)
     return observ
 
   def _convert_observ(self, observ):

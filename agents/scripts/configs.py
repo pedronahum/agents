@@ -68,10 +68,10 @@ def hopper_hop_no_pixels():
     use_pixels = False
 
     max_length = 1000
-    steps = 1e7  # 10M
-    update_every = 60
+    steps = 1e4  # 10M
+    update_every = 50
 
-    num_agents = 10
+    num_agents = 5
 
     return locals()
 

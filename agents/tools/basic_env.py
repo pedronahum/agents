@@ -26,7 +26,7 @@ class BasicEnv(environment.Base):
 
         self.observation_space = Box(low=-np.inf, high=np.inf, shape=ob_space.shape,
                                      dtype=np.uint8)
-        self.action_space = Box(action_spec.minimum, action_spec.maximum, dtype='float32')
+        self.action_space = Box(action_spec.minimum, action_spec.maximum, dtype=np.float32)
         self.random_action = np.random.uniform(action_spec.minimum,
                                                action_spec.maximum,
                                                size=action_spec.shape)

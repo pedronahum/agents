@@ -1,10 +1,10 @@
 <img src="https://www.tensorflow.org/images/tf_logo_transp.png" width=25% align="right">
 
-TensorFlow Agents
+TensorFlow Agents for the DeepMind Control Suite and Package
 =================
 
 This project provides optimized infrastructure for reinforcement learning. It
-extends the [OpenAI gym interface][post-gym] to multiple parallel environments
+extends the [DeepMind Control Suite and Package][post-gym] to multiple parallel environments
 and allows agents to be implemented in TensorFlow and perform batched
 computation. As a starting point, we provide BatchPPO, an optimized
 implementation of [Proximal Policy Optimization][post-ppo].
@@ -21,10 +21,10 @@ this project in your research:
 }
 ```
 
-Dependencies: Python 2/3, TensorFlow 1.3+, Gym, ruamel.yaml
+Dependencies: Python 2/3, TensorFlow 1.3+, dm-control, Gym, ruamel.yaml
 
 [paper-agents]: https://arxiv.org/pdf/1709.02878.pdf
-[post-gym]: https://blog.openai.com/openai-gym-beta/
+[post-gym]: https://github.com/deepmind/dm_control
 [post-ppo]: https://blog.openai.com/openai-baselines-ppo/
 
 Instructions
@@ -33,12 +33,12 @@ Instructions
 Clone the repository and run the PPO algorithm by typing:
 
 ```shell
-python3 -m agents.scripts.train --logdir=/path/to/logdir --config=pendulum
+python3 -m agents.scripts.train --logdir=/path/to/logdir --config=hopper_hop_no_pixels
 ```
 
-The algorithm to use is defined in the configuration and `pendulum` started
-here uses the included PPO implementation. Check out more pre-defined
-configurations in `agents/scripts/configs.py`.
+The algorithm to use is defined in the configuration and `hopper_hop_no_pixels` started
+here uses the included PPO implementation. More pre-defined
+configurations in `agents/scripts/configs.py` will be configured shortly.
 
 If you want to resume a previously started run, add the `--timestamp=<time>`
 flag to the last command and provide the timestamp in the directory name of
@@ -51,7 +51,8 @@ browser to `http://localhost:2222`:
 tensorboard --logdir=/path/to/logdir --port=2222
 ```
 
-To render videos and gather OpenAI Gym statistics to upload to the scoreboard,
+## TODO:  
+To render videos and gather dm-control statistics to upload to the scoreboard,
 type:
 
 ```shell

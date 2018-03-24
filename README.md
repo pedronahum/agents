@@ -3,6 +3,9 @@
 TensorFlow Agents for the DeepMind Control Suite and Package
 =================
 
+Although this fork is still WIP, the goal is to extend [agents][post-agents] to test RL algorithms
+in the [DeepMind Control Suite and Package][post-gym].  
+
 This project provides optimized infrastructure for reinforcement learning. It
 extends the [DeepMind Control Suite and Package][post-gym] to multiple parallel environments
 and allows agents to be implemented in TensorFlow and perform batched
@@ -23,6 +26,7 @@ this project in your research:
 
 Dependencies: Python 2/3, TensorFlow 1.3+, dm-control, Gym, ruamel.yaml
 
+[post-agents]: https://github.com/tensorflow/agents
 [paper-agents]: https://arxiv.org/pdf/1709.02878.pdf
 [post-gym]: https://github.com/deepmind/dm_control
 [post-ppo]: https://blog.openai.com/openai-baselines-ppo/
